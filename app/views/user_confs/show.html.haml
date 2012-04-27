@@ -1,0 +1,27 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first= link_to "#{t("web-app-theme.list", :default => "List")}", user_confs_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_user_conf_path
+      %li.active= link_to "#{t("web-app-theme.show", :default => "Show")}", user_conf_path
+  .content
+    .inner
+      %p
+        %b
+          = t("activerecord.attributes.user_conf.name", :default => t("activerecord.labels.name", :default => "Name"))
+          \:
+        = @user_conf.name
+      %p
+        %b
+          = t("activerecord.attributes.user_conf.code", :default => t("activerecord.labels.code", :default => "Code"))
+          \:
+        = @user_conf.code
+      %p
+        %b
+          = t("activerecord.attributes.user_conf.email", :default => t("activerecord.labels.email", :default => "Email"))
+          \:
+        = @user_conf.email
+      .wat-cf
+        = link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_user_conf_path(@user_conf), :class => "button"
+        = link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), user_conf_path(@user_conf), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"
+- content_for :sidebar, render(:partial => 'sidebar')

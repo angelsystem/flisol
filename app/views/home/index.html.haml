@@ -1,0 +1,20 @@
+#block-text.block
+  .content
+    %h2.title Home
+    .inner
+      %p.first
+        La comunidad de Software Libre de Altura Pasco "CSLAPASCO" esta organizando en nuestra ciudad el Festival Latinoamericano de Instalaciòn de Software Libre FLISOL 2012. Como cada año este Festival se realizará en la Escuela de Sistemas y Computación ubicada en la Av. Los Proceres S/N, San Juan, el dia 28 de Abril desde las 9.00 am, el ingreso es libre.        
+      %p
+        %span.small 
+          Dicho evento tiene como objetivo fomentar la Filosofía del Software Libre con charlas sobre tecnologías relacionadas a Internet, Programación, Diseño, Base de datos, Móviles etc., también la instalación de Software Libre (Ubuntu, Debian, Suse, etc) para cualquiera que lleve su PC o Laptop.
+      %p
+        %span.gray Para mas información pueden ingresar al GRUPO OFICIAL de la Escuela de Sistemas y Computaciòn en FACEBOOK https://www.facebook.com/groups/104603246313710/ o tambien al FanPage en FACEBOOK de CSLAPASCO https://www.facebook.com/CSLAPASCO.
+      %hr/
+      %p
+        La entrada es totalmente libre a los primeros participantes se les obsequiara CD`s con las últimas versiones del Sistema Operativo UBUNTU, entre otros regalos.
+        = succeed "," do
+          %span.hightlight Excepteur sint occaecat cupidatat non proident
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+      %div{:style=>"text-align: center"}  
+        %img{:src=>"http://undac.edu.pe/sites/default/files/FLISOL.jpg"} 
+- content_for :sidebar, render(:partial => 'sidebar')

@@ -6,7 +6,10 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
+gem 'haml'
+gem 'devise'
+gem 'kaminari'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,6 +18,16 @@ group :assets do
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
+
+group :development, :test do
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'haml-rails'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'web-app-theme', '~> 0.8.0'
+end
+
 
 gem 'jquery-rails'
 
